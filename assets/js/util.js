@@ -1,3 +1,20 @@
+function calculate2() {
+	result_temp = [];
+
+	const N2 = document.getElementById("n2").value;
+	const txt = document.getElementById("result2");
+
+	result_temp.push(
+		"CNT (" + N2 + ",0)\n"
+	)
+
+	for(var i=1; i <= N2; i++){
+		result_temp.push(i + "\n")
+	}
+	txt.innerHTML = result_temp;
+}
+
+
 (function($) {
 
 	/**
