@@ -56,25 +56,17 @@
 									<a href="#" class="image"><img src="images/cnt_zigzag.jpg" alt="" /></a>
 									<div class="content">
 										<h2 class="major">Zigzag</h2>
-											
 											<p> (N, 0)<br> Minimum Value of N = 3</p>
-											<form method="post" action="#">
-												<div class="fields">
-													<div class="field">
-														<label for="name">N</label>
-														<input type="number" name="N2" id="N2" value="6" min="3" />
-													</div>
-												</div>
-
-												
-												<ul class="actions">
-													<li><input type="submit" id="calculate" value="Get VASP File" /></li>
-												</ul>
+											
 												<div class="field">
+													<p><label for="name">N</label>
+													<input type="number" name="n2" id="n2" value="6" min="3" /> </p>
+													<p><button id="calculate2" onclick = "calculate2()" > Get VASP File </button></p>
+													
 													<label for="name">CNT VASP POSCAR</label>
-													<textarea name="result2" id="result2" rows="4" readonly> </textarea>
-												</div>
-											</form>
+													<textarea name="result2" id="result2" rows="4" readonly> Save the file as *.VASP </textarea>
+												</div>												
+												
 											
 									</div>
 								</div>
