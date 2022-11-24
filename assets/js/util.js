@@ -2,25 +2,61 @@ function calculate2() {
 	result_temp = [];
 
 	const N2 = document.getElementById("n2").value;
-	const txt = document.getElementById("result2");
+	const txt = document.getElementById("result2");	
+	
+	var lattice_param_a, lattice_param_c, x0, y0, dx, dy;
+	const c_bondlength = 1.42; var lattice_param_c = c_bondlength*3 + "000000";
+
+	// Calculate
+	var r = (c_bondlength*N2*Math.sqrt(3)) / (2*Math.PI);
+	var deg1 = 360/N2;
+	
+	if (N2 > 10) {
+		lattice_param_a = parseInt((Math.round(r*2*Math.PI/10) * 10)) + parseInt(20);
+	}
+	else {
+		lattice_param_a = 30
+	};
+	
+	var x0 = parseFloat(lattice_param_a/2); var y0 = parseFloat(lattice_param_a/2);
 
 	result_temp.push(
-		"CNT (" + N2 + ",0)\n"
-	)
+		"CNT_zigzag (" + N2 + ",0)\n" +
+		"1.0\n" +
+		lattice_param_a + ".00000000\t\t0.00000000\t\t0.00000000\n" +
+		"0.00000000\t\t" + lattice_param_a + ".00000000\t\t0.00000000\n" +
+		"0.00000000\t\t0.00000000\t\t" + lattice_param_c + "\n" +
+		"C\n"+(N2*4)+"\nCartesian\n"		
+	);
 
-	for(var i=1; i <= N2; i++){
-		result_temp.push(i + "\n")
-	}
-	txt.innerHTML = result_temp;
+	
+	for(var i=1; i<=N2; i++) {
+		var dx = r * Math.cos((Math.PI/180)*deg1*i); var dy = r* Math.sin((Math.PI/180)*deg1*i);
+		result_temp.push((x0+dx) + "\t\t"+ (y0+dy) +"\t\t"+ (c_bondlength*0.5) +"\n");
+	};
+
+	for(var i=1; i<=N2; i++) {
+		var dx = r * Math.cos((Math.PI/180)*deg1*i); var dy = r* Math.sin((Math.PI/180)*deg1*i);
+		result_temp.push((x0+dx) + "\t\t"+ (y0+dy) +"\t\t"+ (c_bondlength*2.5) +"\n");
+	};
+
+	for(var i=1; i<=N2; i++) {
+		var dx = r * Math.cos((Math.PI/180)*(deg1*i + 0.5*deg1)); var dy = r* Math.sin((Math.PI/180)*(deg1*i + 0.5*deg1));
+		result_temp.push((x0+dx) + "\t\t"+ (y0+dy) +"\t\t"+ (c_bondlength) +"\n");
+	};
+
+	for(var i=1; i<=N2; i++) {
+		var dx = r * Math.cos((Math.PI/180)*(deg1*i + 0.5*deg1)); var dy = r* Math.sin((Math.PI/180)*(deg1*i + 0.5*deg1));
+		result_temp.push((x0+dx) + "\t\t"+ (y0+dy) +"\t\t"+ (c_bondlength)*2 +"\n");
+	};
+
+
+	txt.innerHTML = result_temp.join('');
 }
 
 
 (function($) {
 
-	/**
-	 * Generate an indented list of links from a nav. Meant for use with panel().
-	 * @return {jQuery} jQuery object.
-	 */
 	$.fn.navList = function() {
 
 		var	$this = $(this);
@@ -51,11 +87,6 @@ function calculate2() {
 
 	};
 
-	/**
-	 * Panel-ify an element.
-	 * @param {object} userConfig User config.
-	 * @return {jQuery} jQuery object.
-	 */
 	$.fn.panel = function(userConfig) {
 
 		// No elements?
