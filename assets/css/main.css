@@ -2865,14 +2865,15 @@ input, select, textarea {
 		box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
 		color: #ffffff !important;
 		cursor: pointer;
-		display: inline-block;
+		display: block;
 		font-family: Raleway, Helvetica, sans-serif;
 		font-size: 0.8em;
 		font-weight: 700;
 		height: 3.75em;
 		letter-spacing: 0.1em;
 		line-height: 3.75em;
-		padding: 0 2.25em;
+		padding: 0 5%;
+		margin: auto;
 		text-align: center;
 		text-decoration: none;
 		text-transform: none;
