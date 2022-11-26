@@ -3,7 +3,7 @@
 <html>
 	<head>
 
-		<title>Carbon Nanotube Generator 1.0 by Sue</title>
+		<title>Carbon Nanotube Generator v0.5 by Sue</title>
 		<meta name="description" content="Installation is NOT required! Create a Carbon Nanotube Model (VASP POSCAR, CIF). ">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -20,7 +20,7 @@
 				<!-- Header -->
 
 					<header id="header" class="alt">
-						<h1><a href="index.html">CNT Generator 1.0 by Sue</a></h1>
+						<h1><a href="index.html">CNT Generator v0.5 by Sue</a></h1>
 					</header>
 
 
@@ -30,7 +30,7 @@
 					<section id="banner">
 						<div class="inner">
 							<div class="logo"><span class="icon solid fa-draw-polygon"></span></div>
-							<h2>Carbon Nanotubes Structure File Generator</h2>
+							<h2>Carbon Nanotubes Structure Generator</h2>
 							<p>Create a Single-Walled Armchair/Zigzag Nanotube.</p>
 						</div>
 					</section>
@@ -38,65 +38,59 @@
 
 
 				<!-- Wrapper -->
-
 					<section id="wrapper">
-
-						<!-- 1: Armchair-->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a class="image"><img src="images/cnt_armchair.jpg" alt="" /></a>
-
-									<div class="content">
-										<h2 class="major">Armchair</h2>
-										<p>To be updated</p>
-
-
-									</div>
-
-								</div>
-
-							</section>
-
-
-
 						<!-- 2: Zigzag -->
 
 							<section id="two" class="wrapper alt spotlight style2">
 								<div class="inner">
-									<a href="#" class="image"><img src="images/cnt_zigzag.jpg" alt="" /></a>
+									<a class="image"><img src="images/cnt_zigzag.jpg" alt="zigzag icon" /></a>
+
 									<div class="content">
 										<h2 class="major">Zigzag</h2>
 											<p> (N, 0)<br> Minimum Value of N = 3</p>
 					
 												<div class="field">
-													<p><label for="name">N</label>
+													<p><label for="name2">N</label>
 													<input type="number" name="n2" id="n2" value="6" min="3" /> </p>
 
 													<p><button id="calculate2" onclick = "calculate2()" > Get! </button></p>
 
-													
-
-													<label for="name">CNT.vasp for VESTA</label>
-
+													<label for="name22">CNT.vasp</label>
 													<textarea name="result2" id="result2" rows="4" readonly> 1. Save this text as *.VASP. &#10; 2. Open it in atomic structure modeling programs such as VESTA. </textarea>
-
 												</div>												
-
-												
-
-											
-
 									</div>
 
 								</div>
 
 							</section>
+						
+						<!-- 1: Armchair-->
+						<section id="one" class="wrapper spotlight style1">
+							<div class="inner">
+								<a class="image"><img src="images/cnt_armchair.jpg" alt="armchair icon" /></a>
 
+								<div class="content">
+									<h2 class="major">Armchair</h2>
+									<p> To be updated</p>
+				
+									<!--div class="field">
+										<p></p>
 
+										<input type="number" name="n1" id="n1" value="5" min="3" /> </p>
 
+										<p><button id="calculate1" onclick = "calculate1()" > Get! </button></p>
 
-
+										<label for="name11"> CNT.vasp </label>
+										<textarea name="result1" id="result1" rows="4" readonly> 1. Save this text as *.VASP. &#10; 2. Open it in atomic structure modeling programs such as VESTA. </textarea>
+									</div-->												
+								</div>
+							</div>
+						</section>
 					</section>
+
+						
+
+
 
 
 
@@ -120,7 +114,7 @@
 
 							<ul class="copyright">
 
-								<li>&copy; Sue 2022. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Sue 2022. All rights reserved.</li><li>Design: HTML5 UP</a></li>
 
 							</ul>
 
@@ -147,4 +141,3 @@
 	</body>
 
 </html>
-
