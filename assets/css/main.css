@@ -3391,7 +3391,7 @@ input, select, textarea {
 			-ms-transform: translateY(0);
 			transform: translateY(0);
 			opacity: 1;
-			margin: 0 0 1.3em 0;
+			
 		}
 
 			#banner .logo .icon {
@@ -3425,9 +3425,9 @@ input, select, textarea {
 			filter: blur(0);
 			opacity: 1;
 			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-			font-size: 2.25em;
-			margin-bottom: 0.8em;
-			padding-bottom: 0.4em;
+			font-size: 2em;
+			margin-bottom: 0.4em;
+			padding-bottom: 0em;
 		}
 
 		#banner p {
@@ -3451,9 +3451,9 @@ input, select, textarea {
 			font-family: Raleway, Helvetica, sans-serif;
 			font-size: 1em;
 			font-weight: 200;
-			letter-spacing: 0.1em;
 			line-height: 2;
-			/* text-transform: uppercase; */
+			/* letter-spacing: 0.1em;
+			text-transform: uppercase; */
 		}
 
 		@media screen and (max-width: 1280px) {
