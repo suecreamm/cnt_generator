@@ -21,7 +21,7 @@ function calculate1() {
 	var theta0 = 2*Math.asin(c_bondlength/(2*r));
 
 	result_temp.push(
-		"CNT_armchair (" + N1 + ",0)\n" +
+		"CNT_armchair (" + N1 + "," + N1 + ")\n" +
 		"1.0\n" +
 		lattice_param_a + ".00000000\t\t0.00000000\t\t0.00000000\n" +
 		"0.00000000\t\t" + lattice_param_a + ".00000000\t\t0.00000000\n" +
