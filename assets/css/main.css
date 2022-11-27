@@ -4085,7 +4085,7 @@ input, select, textarea {
 		}
 
 			#footer .inner {
-				padding: 3em 3em 1em 3em ;
+				padding: 3em 3em 1em 0em ;
 				display: block;
 				width: 100%;
 			}
@@ -4101,7 +4101,7 @@ input, select, textarea {
 				}
 
 				#footer .inner .copyright {
-					margin: 4em 0 2em 0;
+					margin: 1em 0 1em 0;
 				}
 
 	}
