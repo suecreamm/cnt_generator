@@ -71,7 +71,7 @@ function calculate2() {
 	};
 	
 	var x0 = parseFloat(lattice_param_a/2); var y0 = parseFloat(lattice_param_a/2);
-	result_temp.push(r);
+
 	result_temp.push(
 		"CNT_zigzag (" + N2 + ",0)\n" +
 		"1.0\n" +
