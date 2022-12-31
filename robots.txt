@@ -1,8 +1,0 @@
-User-agent: *
-Disallow: /
-
-User-agent: *
-Allow: /ads.txt
-
-Sitemaps: https://sue-creator.github.io/cnt_generator/sitemap.xml
-
