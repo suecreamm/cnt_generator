@@ -1,4 +1,4 @@
-# cnt_generator
+# Carbon Naotubes Generator
 
 ***
 <p>
