@@ -1,4 +1,4 @@
-# Easy Carbon Naotubes Generator
+# Carbon Naotubes Generator Online v1.0
 ### Website
 ![Carbon Nanotubes Generator Demonstration](readmeImg.png)
 <br><br>
