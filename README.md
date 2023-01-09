@@ -9,7 +9,6 @@ No one wants to install a program that is only used occasionally and for a short
 
 
 ## References
-CNT images: <a href="https://pubs.rsc.org/en/content/articlehtml/2016/sc/c5sc04218f" target="_blank">Chem. Sci., 2016, 7, 3681</a><br>
 Design: <a href="https://html5up.net/" target="_blank">Solid State by HTML5 UP</a><br>
 
 ***
