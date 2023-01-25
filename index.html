@@ -66,17 +66,32 @@
 
 									<div class="content">
 										<h2 class="major">Armchair</h2>
-										<p> (N, N)<br> Minimum Value of N = 3</p>
-					
-										<div class="field">
-											<p><label for="name1">N</label>
-											<input type="number" name="n1" id="n1" value="5" min="3" /> </p>
+										
+										<div class = "row">
+											<div class="col-6">
+												<input type="radio" id="n1_on" name="n1_on" checked/>
+												<label for="n1_on">N</label>
+											</div>
+											<div class="col-6">
+												<input type="number" name="n1" id="n1" value="5" min="3"/>
+											</div>
+										</div>
+										
+										<div class = "row">
+											<div class="col-6 d-checkbox">
+												<input type="checkbox" id="d1on" name="d1on"/>
+												<label for="d1on">C-C Bond Length</label>
+											</div>
+											<div class="col-6 d-inputbox" id="d1-box">
+												<input type="number" name="d1" id="d1" value="1.42" min="1.42" step="0.1" />
+											</div>
+										</div>
 
-											<p><button id="calculate1" onclick = "calculate1()" > ⬣ </button></p>
+										<p><button id="calculate1" onclick = "calculate1()" > ⬣ </button></p>
 
 											<label for="name11"> CNT.vasp </label>
 											<textarea name="result1" id="result1" rows="4" readonly> 1. Save this text as *.VASP. &#10; 2. Open it with VESTA, free atomic structure modeling application. </textarea>
-										</div>												
+										</p>
 
 									</div>
 
@@ -94,17 +109,34 @@
 
 									<div class="content">
 										<h2 class="major">Zigzag</h2>
-											<p> (N, 0)<br> Minimum Value of N = 3</p>
-					
-												<div class="field">
-													<p><label for="name2">N</label>
-													<input type="number" name="n2" id="n2" value="6" min="3" /> </p>
+										
+										<div class = "row">
+											<div class="col-6">
+												<input type="radio" id="n2_on" name="n2_on" checked/>
+												<label for="n2_on">N</label>
+											</div>
+											<div class="col-6">
+												<input type="number" name="n2" id="n2" value="5" min="3"/>
+											</div>
+										</div>
+										
+										<div class = "row">
+											<div class="col-6 d-checkbox">
+												<input type="checkbox" id="d2on" name="d1on"/>
+												<label for="d2on">C-C Bond Length</label>
+											</div>
+											<div class="col-6 d-inputbox" id="d2-box">
+												<input type="number" name="d2" id="d2" value="1.42" min="1.42" step="0.1" />
+											</div>
+										</div>
 
-													<p><button id="calculate2" onclick = "calculate2()" > ⬢ </button></p>
+										<p><button id="calculate2" onclick = "calculate2()" > ⬣ </button></p>
 
-													<label for="name22">CNT.vasp</label>
-													<textarea name="result2" id="result2" rows="4" readonly> 1. Save this text as *.VASP. &#10; 2. Open it with VESTA, free atomic structure modeling application. </textarea>
-												</div>												
+											<label for="name22"> CNT.vasp </label>
+											<textarea name="result2" id="result2" rows="4" readonly> 1. Save this text as *.VASP. &#10; 2. Open it with VESTA, free atomic structure modeling application. </textarea>
+										</p>
+										
+
 									</div>
 
 								</div>
@@ -116,7 +148,6 @@
 
 
 				<!-- Footer -->
-
 					<section id="footer">
 
 						<div class="inner">
