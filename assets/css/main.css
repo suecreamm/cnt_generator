@@ -2331,6 +2331,8 @@ input, select, textarea {
 	
 	.d-inputbox {
 		display: none;
+                transition: all 0.5s;
+
 	}
 	
 	.active{
