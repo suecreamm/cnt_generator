@@ -1,3 +1,48 @@
+var cb1 = document.querySelector('#d1on'); var cb2 = document.querySelector('#d2on');
+var d1box = document.getElementById("d1-box"); var d2box = document.getElementById("d2-box");
+var c_bondlength1=1.42; var c_bondlength2=1.42;
+
+/* 					d1 on 					*/
+cb1.addEventListener('change', (event) => {
+var cb1on = event.target.checked;
+
+if(cb1on == true){
+	d1box.classList.add('active');
+	var dd1 = document.getElementById("d1");
+
+	dd1.addEventListener('change', function() {
+		c_bondlength1 = dd1.value;
+	return d1});
+
+}
+else if(cb1on == false){
+	d1box.classList.remove('active');
+	c_bondlength1 = 1.42;
+}
+});
+
+/* 					d2 on 					*/
+cb2.addEventListener('change', (event) => {
+	var cb2on = event.target.checked;
+	
+	if(cb2on == true){
+		d2box.classList.add('active');
+		var dd2 = document.getElementById("d2");
+	
+		dd2.addEventListener('change', function() {
+			c_bondlength2 = dd2.value;
+		return d2});
+	
+	}
+	else if(cb2on == false){
+		d2box.classList.remove('active');
+		c_bondlength2 = 1.42;
+	}
+	});
+
+
+
+
 function calculate1() {
 	result_temp = [];
 
@@ -5,9 +50,9 @@ function calculate1() {
 	const txt1 = document.getElementById("result1");	
 	
 	var lattice_param_a, lattice_param_c, x0, y0, dx, dy;
-	const c_bondlength = 1.42; var lattice_param_c = c_bondlength*Math.sqrt(3);
-
-	var r = (3*c_bondlength*N1) / (2*Math.PI);
+	
+	var lattice_param_c = c_bondlength1*Math.sqrt(3);
+	var r = (3*c_bondlength1*N1) / (2*Math.PI);
 	var deg1 = 360/N1;
 	
 	if (N1 > 10) {
@@ -18,10 +63,10 @@ function calculate1() {
 	};
 	
 	var x0 = parseFloat(lattice_param_a/2); var y0 = parseFloat(lattice_param_a/2);
-	var theta0 = 2*Math.asin(c_bondlength/(2*r));
+	var theta0 = 2*Math.asin(c_bondlength1/(2*r));
 
 	result_temp.push(
-		"CNT_armchair (" + N1 + "," + N1 + ")\n" +
+		"CNT" + c_bondlength1+"_armchair_" + N1 + "_" + N1 + ".vasp\n" +
 		"1.0\n" +
 		lattice_param_a + ".00000000\t\t0.00000000\t\t0.00000000\n" +
 		"0.00000000\t\t" + lattice_param_a + ".00000000\t\t0.00000000\n" +
@@ -57,10 +102,10 @@ function calculate2() {
 	const txt2 = document.getElementById("result2");	
 	
 	var lattice_param_a, lattice_param_c, x0, y0, dx, dy;
-	const c_bondlength = 1.42; var lattice_param_c = c_bondlength*3 + "000000";
+	var lattice_param_c = c_bondlength2*3 + "000000";
 
 	// Calculate
-	var r = (c_bondlength*N2*Math.sqrt(3)) / (2*Math.PI);
+	var r = (c_bondlength2*N2*Math.sqrt(3)) / (2*Math.PI);
 	var deg1 = 360/N2;
 	
 	if (N2 > 10) {
@@ -73,7 +118,7 @@ function calculate2() {
 	var x0 = parseFloat(lattice_param_a/2); var y0 = parseFloat(lattice_param_a/2);
 
 	result_temp.push(
-		"CNT_zigzag (" + N2 + ",0)\n" +
+		"CNT"+ c_bondlength2 +"_zigzag_" + N2 + "_0.vasp\n" +
 		"1.0\n" +
 		lattice_param_a + ".00000000\t\t0.00000000\t\t0.00000000\n" +
 		"0.00000000\t\t" + lattice_param_a + ".00000000\t\t0.00000000\n" +
@@ -84,22 +129,22 @@ function calculate2() {
 	
 	for(var i=1; i<=N2; i++) {
 		var dx = r * Math.cos((Math.PI/180)*deg1*i); var dy = r* Math.sin((Math.PI/180)*deg1*i);
-		result_temp.push((x0+dx) + "\t\t"+ (y0+dy) +"\t\t"+ (c_bondlength*0.5) +"\n");
+		result_temp.push((x0+dx) + "\t\t"+ (y0+dy) +"\t\t"+ (c_bondlength2*0.5) +"\n");
 	};
 
 	for(var i=1; i<=N2; i++) {
 		var dx = r * Math.cos((Math.PI/180)*deg1*i); var dy = r* Math.sin((Math.PI/180)*deg1*i);
-		result_temp.push((x0+dx) + "\t\t"+ (y0+dy) +"\t\t"+ (c_bondlength*2.5) +"\n");
+		result_temp.push((x0+dx) + "\t\t"+ (y0+dy) +"\t\t"+ (c_bondlength2*2.5) +"\n");
 	};
 
 	for(var i=1; i<=N2; i++) {
 		var dx = r * Math.cos((Math.PI/180)*(deg1*i + 0.5*deg1)); var dy = r* Math.sin((Math.PI/180)*(deg1*i + 0.5*deg1));
-		result_temp.push((x0+dx) + "\t\t"+ (y0+dy) +"\t\t"+ (c_bondlength) +"\n");
+		result_temp.push((x0+dx) + "\t\t"+ (y0+dy) +"\t\t"+ (c_bondlength2) +"\n");
 	};
 
 	for(var i=1; i<=N2; i++) {
 		var dx = r * Math.cos((Math.PI/180)*(deg1*i + 0.5*deg1)); var dy = r* Math.sin((Math.PI/180)*(deg1*i + 0.5*deg1));
-		result_temp.push((x0+dx) + "\t\t"+ (y0+dy) +"\t\t"+ (c_bondlength)*2 +"\n");
+		result_temp.push((x0+dx) + "\t\t"+ (y0+dy) +"\t\t"+ (c_bondlength2)*2 +"\n");
 	};
 
 	txt2.innerHTML = result_temp.join('');
