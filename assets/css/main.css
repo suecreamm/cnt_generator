@@ -2330,13 +2330,13 @@ input, select, textarea {
 	}
 	
 	.d-inputbox {
-		display: none;
+		opacity: 0;
                 transition: all 0.5s;
 
 	}
 	
 	.active{
-		display: inline-block;
+		opacity: 1;
 	}
 
 
