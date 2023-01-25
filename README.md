@@ -1,4 +1,4 @@
-# Carbon Nanotubes Generator Online v1.0
+# Carbon Nanotubes Generator Online v1.1
 ## Website
 ![Carbon Nanotubes Generator Demonstration](readmeImg.png)
 <br><a href="https://github.com/sue-creator/cnt_generator/blob/main/readmeImg.png">  ▲ Go to the Demo (YouTube) </a>
