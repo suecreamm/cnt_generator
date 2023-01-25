@@ -2272,6 +2272,7 @@ input, select, textarea {
 			font-weight: 300;
 			padding-left: 2.4em;
 			padding-right: 0.75em;
+			float: left;
 			position: relative;
 		}
 
@@ -2304,6 +2305,7 @@ input, select, textarea {
 				text-align: center;
 				top: 0;
 				width: 2.0625em;
+				
 			}
 
 		input[type="checkbox"]:checked + label:before,
@@ -2326,6 +2328,17 @@ input, select, textarea {
 	input[type="radio"] + label:before {
 		border-radius: 100%;
 	}
+	
+	.d-inputbox {
+		display: none;
+	}
+	
+	.active{
+		display: inline-block;
+	}
+
+
+
 
 	::-webkit-input-placeholder {
 		color: rgba(255, 255, 255, 0.35) !important;
