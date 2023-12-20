@@ -1,12 +1,12 @@
 # Carbon Nanotubes Generator Online v1.1
 ## Website
 ![Carbon Nanotubes Generator Demonstration](readmeImg.png)
-<br><a href="https://github.com/sue-creator/cnt_generator/blob/main/readmeImg.png">  ▲ Go to the Demo (YouTube) </a>
+<br><a href="https://github.com/suecreamm/cnt_generator/blob/main/readmeImg.png">  ▲ Go to the Demo (YouTube) </a>
 <br><br>
-<a href="https://sue-creator.github.io/cnt_generator/" target="_blank" rel="noopener noreferrer">Go to the Web Generator🔮</a><br>
+<a href="https://suecreamm.github.io/cnt_generator/" target="_blank" rel="noopener noreferrer">Go to the Web Generator🔮</a><br>
 No one wants to install a program that is only used every once in a while and for a short period of time. This generates CNTs' atmoic structures right away through your web browser. No installation is needed! 
 
-- Main Calculation Code: https://github.com/sue-creator/cnt_generator/blob/main/assets/js/util.js
+- Main Calculation Code: https://github.com/suecreamm/cnt_generator/blob/main/assets/js/util.js
 
 
 ## References
