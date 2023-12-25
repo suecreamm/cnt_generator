@@ -11,6 +11,6 @@ issuehunt: # Replace with a single IssueHunt username
 otechie: # Replace with a single Otechie username
 lfx_crowdfunding: # Replace with a single LFX Crowdfunding project-name e.g., cloud-foundry
 custom:
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="suecream" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+[![Most Used Languages](https://github-readme-stats-hggg6lj9f-suecreamm.vercel.app/api/top-langs/?username=suecreamm&exclude_repo=github-readme-stats,suecreamm.github.io&hide=css,html,scss,javascript&layout=compact)](https://github.com/suecreamm/github-readme-stats)
 
 # Replace with up to 4 custom sponsorship URLs e.g., ['link1', 'link2']
